@@ -1,10 +1,10 @@
-# ExpenseEase - User Authentication and Expense Management API
+# SpendiSmart - User Authentication and Expense Management API
 
-ExpenseEase is a Spring Boot backend application that provides user authentication and expense management APIs. It allows users to register, log in, and manage their expenses efficiently.
+SpendiSmart is a Spring Boot backend application that provides user authentication and expense management APIs. It allows users to register, log in, and manage their expenses efficiently.
 
 ## Description
 
-ExpenseEase simplifies the process of managing expenses by providing a secure authentication system for users to register and log in. Once authenticated, users can access the expense management APIs to perform various operations, such as adding new expenses, viewing existing expenses, and categorizing expenses.
+SpendiSmart simplifies the process of managing expenses by providing a secure authentication system for users to register and log in. Once authenticated, users can access the expense management APIs to perform various operations, such as adding new expenses, viewing existing expenses, and categorizing expenses.
 
 ## Features
 
