@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.spendismart.spendismart.dto.TransactionDto;
 import com.spendismart.spendismart.entity.Transaction;
-import com.spendismart.spendismart.entity.User;
 import com.spendismart.spendismart.repository.TransactionRepository;
 import com.spendismart.spendismart.repository.UserRepository;
 
