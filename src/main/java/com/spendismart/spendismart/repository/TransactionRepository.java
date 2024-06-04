@@ -9,5 +9,5 @@ import com.spendismart.spendismart.entity.Transaction;
 
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
-    List<Transaction> findByUpiId(String upiId);
+    List<Transaction> findByUserId(Long userId);
 }
