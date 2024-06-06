@@ -1,25 +1,33 @@
 package com.spendismart.spendismart.entity;
 
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "transaction")
 @Data
-@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="upiId", nullable=false)
+    @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference
     private User user;
 
     private String category;
@@ -27,4 +35,12 @@ public class Transaction {
 
     private LocalDateTime timestamp;
 
+    public Transaction(User user, String category, Double amount, LocalDateTime timestamp) {
+        this.user = user;
+        this.category = category;
+        this.amount = amount;
+        this.timestamp = timestamp;
+    }
 }
+
+
